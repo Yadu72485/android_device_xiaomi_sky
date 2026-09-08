@@ -416,8 +416,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/pixel/power-libperfmgr/libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/qcom-caf/sm8450/audio/agm/ipc/HwBinders/legacy \
-    hardware/xiaomi
+    hardware/qcom-caf/sm8450/audio/agm/ipc/HwBinders/legacy
 
 # Telephony
 PRODUCT_PACKAGES += \
