@@ -232,9 +232,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/private/xiaomi/devicesettings
 
-#SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-#    $(DEVICE_PATH)/sepolicy/public/xiaomi/devicesettings
-
 # Vendor Boot
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
@@ -267,6 +264,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
 ODM_MANIFEST_SKUS += hceese hcesim hcesim1 hcesim1ese hcesimese
+ODM_MANIFEST_HCEESE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hceese.xml
 ODM_MANIFEST_HCESIM_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hcesim.xml
 ODM_MANIFEST_HCESIM1_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hcesim1.xml
 ODM_MANIFEST_HCESIM1ESE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hcesim1ese.xml
@@ -288,6 +286,6 @@ WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += hardware/xiaomi
-
