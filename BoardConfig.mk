@@ -41,7 +41,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
-# ARTAdd commentMore actions
+# ART
 ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
@@ -75,6 +75,8 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 # Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Camera
 MALLOC_SVELTE := true
@@ -97,7 +99,7 @@ BOARD_HAVE_QCOM_FM := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 $(call soong_config_set, qtilocation, feature_nhz, false)
 
-# HWUIAdd commentMore actions
+# HWUI
 HWUI_COMPILE_FOR_PERF := true
 
 # Kernel
@@ -231,9 +233,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 # Sepolicy - XiaomiParts
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/private/xiaomi/devicesettings
-
-#SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-#    $(DEVICE_PATH)/sepolicy/public/xiaomi/devicesettings
 
 # Vendor Boot
 PRODUCT_COPY_FILES += \
