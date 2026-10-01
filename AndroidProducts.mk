@@ -6,3 +6,7 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_sky.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_sky-ap4a-eng \
+    lineage_sky-ap4a-userdebug
